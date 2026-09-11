@@ -25,6 +25,6 @@ Rồi mở http://localhost:5520
 
 ## Lưu ý
 
-- Ảnh thật của Mô: `assets/img/`. Các ảnh còn lại là ảnh minh hoạ từ Unsplash, sẽ thay bằng ảnh của Mô.
-- Giá, tên màu và nội dung quảng cáo đang là nội dung tạm.
+- Toàn bộ ảnh là ảnh thật của Mô (bộ ảnh bedding setup), nằm trong `assets/img/` và được đặt tên theo vị trí trên trang (`hero-1.jpg`, `coll-nha.jpg`, `p-nha-1.jpg`…). Muốn đổi ảnh chỉ cần thay file cùng tên.
+- Tên sản phẩm, giá, màu lấy theo catalogue Mô Đi Phê; chính sách giao hàng / đổi trả theo file chính sách bán hàng.
 - Các trang có thẻ `noindex` để Google không lập chỉ mục bản demo — xoá khi lên web chính thức.
