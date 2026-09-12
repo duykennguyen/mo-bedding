@@ -15,10 +15,11 @@
   --brand: #6e3428;      /* nâu đỏ của logo Mô */
   --accent: #b5533c;     /* đất nung */
   --sage: #8a9480;
+  --green: #2f3a30;      /* xanh rêu như tường phòng ngủ nhà Mô */
   --white: #fdfbf8;
 
-  --serif: "Petrona", Georgia, "Times New Roman", serif;
-  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --wrap: 1440px;
   --pad: clamp(20px, 3.2vw, 48px);
@@ -41,7 +42,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; padding: 0; }
 input { font: inherit; }
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; margin: 0; line-height: 1.12; letter-spacing: -.01em; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.1; letter-spacing: -.005em; }
 p { margin: 0; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
@@ -56,10 +57,10 @@ p { margin: 0; }
   text-transform: uppercase;
   color: var(--muted);
 }
-.h-xl { font-size: clamp(40px, 5.6vw, 76px); }
-.h-lg { font-size: clamp(32px, 3.6vw, 48px); }
-.h-md { font-size: clamp(26px, 2.6vw, 34px); }
-.h-sm { font-size: 22px; }
+.h-xl { font-size: clamp(46px, 6.4vw, 88px); }
+.h-lg { font-size: clamp(36px, 4.2vw, 58px); }
+.h-md { font-size: clamp(28px, 3vw, 40px); }
+.h-sm { font-size: 25px; }
 .lead { font-size: 16px; color: var(--ink-soft); max-width: 46ch; }
 .italic { font-style: italic; }
 
@@ -73,7 +74,7 @@ p { margin: 0; }
   white-space: nowrap;
 }
 .btn:hover { background: var(--ink); color: var(--white); }
-.btn--solid { background: var(--ink); color: var(--white); }
+.btn--solid { background: var(--green); border-color: var(--green); color: var(--white); }
 .btn--solid:hover { background: var(--brand); border-color: var(--brand); }
 .btn--light { border-color: rgba(253,251,248,.85); color: var(--white); background: rgba(253,251,248,.06); backdrop-filter: blur(2px); }
 .btn--light:hover { background: var(--white); color: var(--ink); }
@@ -87,7 +88,7 @@ p { margin: 0; }
 
 /* ---------- Thanh thông báo ---------- */
 .announce {
-  background: var(--ink); color: var(--bg);
+  background: var(--green); color: #ece5d8;
   font-size: 11px; letter-spacing: .14em; text-transform: uppercase; text-align: center;
   padding: 9px var(--pad);
 }
@@ -183,7 +184,7 @@ p { margin: 0; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative; overflow: hidden;
-  height: clamp(560px, calc(100vh - 104px), 880px);
+  height: clamp(620px, calc(100svh - 102px), 980px);
   background: var(--bg-deep);
   color: var(--white);
 }
@@ -205,7 +206,7 @@ p { margin: 0; }
   position: absolute; left: 0; right: 0; bottom: clamp(48px, 8vh, 88px); z-index: 2;
 }
 .hero__content .eyebrow { color: rgba(253,251,248,.85); margin-bottom: 18px; }
-.hero__title { font-size: clamp(44px, 6.4vw, 92px); max-width: 13ch; }
+.hero__title { font-size: clamp(64px, 10vw, 150px); max-width: 13ch; line-height: .95; }
 .hero__title em { font-style: italic; }
 .hero__sub { margin: 18px 0 30px; font-size: 16px; max-width: 42ch; color: rgba(253,251,248,.9); }
 .hero__text > * { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
@@ -230,7 +231,7 @@ p { margin: 0; }
   text-align: center; padding: clamp(56px, 8vw, 110px) var(--pad) clamp(40px, 5vw, 64px);
 }
 .tagline p.script {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-style: italic; font-weight: 400;
   font-size: clamp(34px, 4.4vw, 60px); color: var(--brand); line-height: 1.1;
 }
 .tagline p.sub { margin-top: 14px; color: var(--muted); }
@@ -254,7 +255,7 @@ p { margin: 0; }
 .coll::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(20,16,14,.55)); }
 .coll__txt { position: absolute; left: 26px; right: 26px; bottom: 24px; z-index: 1; }
 .coll__txt .eyebrow { color: rgba(253,251,248,.8); }
-.coll__txt h3 { font-size: clamp(28px, 2.8vw, 40px); margin: 6px 0 8px; }
+.coll__txt h3 { font-size: clamp(30px, 3vw, 46px); margin: 6px 0 8px; }
 .coll__txt p { font-size: 14px; color: rgba(253,251,248,.88); max-width: 34ch; }
 .coll__more { margin-top: 14px; display: inline-flex; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; border-bottom: 1px solid; padding-bottom: 2px; }
 .coll--throw { grid-column: span 2; }
@@ -321,7 +322,7 @@ p { margin: 0; }
   background: var(--bg-alt);
 }
 .story-split__txt blockquote {
-  margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.18;
+  margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 3.6vw, 54px); line-height: 1.14;
 }
 .story-split__txt blockquote em { color: var(--brand); }
 .story-split__txt p { color: var(--ink-soft); max-width: 44ch; }
@@ -340,7 +341,7 @@ p { margin: 0; }
 .lifestyle img { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; will-change: transform; }
 .lifestyle::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,16,14,.5), rgba(20,16,14,0) 60%); }
 .lifestyle__txt { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); z-index: 1; }
-.lifestyle__txt h2 { font-size: clamp(40px, 5.4vw, 80px); max-width: 12ch; }
+.lifestyle__txt h2 { font-size: clamp(46px, 6vw, 92px); max-width: 12ch; }
 .lifestyle__txt p { margin: 20px 0 30px; max-width: 38ch; color: rgba(253,251,248,.9); font-size: 16px; }
 
 /* ---------- Material education ---------- */
@@ -419,7 +420,7 @@ p { margin: 0; }
 /* ---------- Newsletter + Footer (kiểu Parachute) ---------- */
 .footer { background: var(--bg); border-top: 1px solid var(--line); padding: clamp(56px, 6vw, 88px) 0 28px; }
 .footer__grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 40px; }
-.footer__lead h3 { font-size: 30px; margin-bottom: 20px; max-width: 14ch; }
+.footer__lead h3 { font-size: 32px; margin-bottom: 20px; max-width: 22ch; }
 .newsletter { display: flex; align-items: center; background: #8d7f73; border-radius: 40px; padding: 5px 5px 5px 22px; max-width: 360px; }
 .newsletter input { flex: 1; min-width: 0; background: none; border: 0; outline: none; color: var(--white); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 .newsletter input::placeholder { color: rgba(253,251,248,.85); }
@@ -557,3 +558,33 @@ p { margin: 0; }
   .article figure { margin: 28px 0; }
   .related .products { grid-auto-columns: 80%; }
 }
+
+/* ---------- Hero rút gọn ---------- */
+.hero__sub.script-sub {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(21px, 2.3vw, 32px); color: rgba(253,251,248,.92);
+  margin: 10px 0 32px; letter-spacing: .01em;
+}
+.hero__title em { font-style: italic; }
+.story-grid--home { padding: 0; }
+.story-grid--home .scard p:not(.eyebrow) { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+/* ---------- Gợi ý cuộn ở hero ---------- */
+.hero__cue {
+  position: absolute; left: 50%; bottom: 26px; z-index: 3; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: rgba(253,251,248,.8);
+}
+.hero__cue span { display: block; width: 1px; height: 44px; background: linear-gradient(rgba(253,251,248,.7), rgba(253,251,248,0)); animation: cue 2.4s ease-in-out infinite; }
+@keyframes cue { 0%, 100% { transform: scaleY(.4); transform-origin: top; opacity: .5 } 50% { transform: scaleY(1); opacity: 1 } }
+
+/* ---------- Dải trích dẫn từ kho chuyện của Mô ---------- */
+.quote-band { background: var(--green); color: #f1ece0; text-align: center; padding: clamp(64px, 9vw, 132px) 0; }
+.quote-band .eyebrow { color: rgba(241,236,224,.6); }
+.quote-band blockquote {
+  margin: 22px auto 18px; max-width: 20ch;
+  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-size: clamp(32px, 4.4vw, 62px); line-height: 1.16;
+}
+.quote-band blockquote em { font-style: italic; color: #e6c9b4; }
+.quote-band cite { font-style: normal; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: rgba(241,236,224,.65); }

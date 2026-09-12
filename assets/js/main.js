@@ -361,6 +361,7 @@ function initHero() {
   const slides = $$('.hero__slide', hero);
   const dots = $('.hero__dots', hero);
   let i = 0, timer;
+  if (slides.length < 2) { dots.remove(); slides[0].classList.add('is-active'); return; }
   dots.innerHTML = slides.map((_, k) => `<button aria-label="Slide ${k + 1}"></button>`).join('');
   const go = n => {
     i = (n + slides.length) % slides.length;
