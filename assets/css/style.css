@@ -1,30 +1,31 @@
 /* =========================================================
-   MÔ BEDDING — giao diện lấy cảm hứng từ Parachute Home
-   Serif Petrona cho tiêu đề · Inter cho nội dung
+   MÔ BEDDING — giao diện chuẩn theo Namia River Retreat
+   Gotu cho tiêu đề (viết hoa) · Open Sans cho nội dung
    ========================================================= */
 
 :root {
-  --bg: #f7f4ef;
-  --bg-alt: #efe9e1;
-  --bg-deep: #e6ddd2;
-  --card: #ece6de;
-  --ink: #2f2a27;
-  --ink-soft: #4a433e;
-  --muted: #7a7069;
-  --line: #e0d8cd;
-  --brand: #6e3428;      /* nâu đỏ của logo Mô */
-  --accent: #b5533c;     /* đất nung */
+  /* Tông màu chuẩn — chủ đạo #E1D2C5, tham chiếu giao diện Namia River Retreat */
+  --bg: #e1d2c5;         /* tông chủ đạo */
+  --bg-alt: #f1ebe3;     /* dải sáng xen kẽ */
+  --bg-deep: #d3c1b0;
+  --card: #d6c5b5;       /* nền chờ ảnh */
+  --ink: #3a3230;        /* chữ nâu đậm */
+  --ink-soft: #4e4441;
+  --muted: #5c504d;
+  --line: #c9b6a4;
+  --brand: #9e7863;      /* nâu điểm nhấn */
+  --accent: #9e7863;
   --sage: #8a9480;
-  --green: #2f3a30;      /* xanh rêu như tường phòng ngủ nhà Mô */
-  --white: #fdfbf8;
+  --green: #3a3230;      /* khối đậm: thanh thông báo, dải trích dẫn, nút đặc */
+  --white: #faf6f1;
 
-  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans: "Manrope", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Gotu", Georgia, "Times New Roman", serif;
+  --sans: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 
   --wrap: 1440px;
   --pad: clamp(20px, 3.2vw, 48px);
   --ease: cubic-bezier(.2, .7, .2, 1);
-  --header-h: 68px;
+  --header-h: 76px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -669,3 +670,157 @@ p { margin: 0; }
 .film__media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .film .bedart { margin-top: clamp(40px, 5vw, 72px); }
 @media (max-width: 760px) { .film__media { aspect-ratio: 3 / 4; } }
+
+/* =========================================================
+   GIAO DIỆN CHUẨN NAMIA (16/09) — ghi đè các quy tắc phía trên
+   ========================================================= */
+
+body { font-size: 15px; line-height: 1.7; color: var(--ink); }
+p { color: inherit; }
+
+/* Gotu chỉ có một nét, không có chữ nghiêng: bỏ nghiêng ở mọi tiêu đề/trích dẫn */
+h1, h2, h3, h4 { font-weight: 400; letter-spacing: .01em; line-height: 1.25; }
+h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
+
+/* Cỡ tiêu đề tiết chế như Namia, viết hoa */
+.h-xl { font-size: clamp(30px, 3.3vw, 46px); text-transform: uppercase; }
+.h-lg { font-size: clamp(26px, 2.6vw, 36px); text-transform: uppercase; }
+.h-md { font-size: clamp(22px, 2vw, 28px); text-transform: uppercase; }
+.h-sm { font-size: 20px; text-transform: uppercase; }
+
+.eyebrow { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .2em; color: var(--brand); }
+.lead { font-size: 15.5px; color: var(--muted); line-height: 1.75; }
+
+/* Nút viền mảnh, chữ viết hoa giãn rộng */
+.btn { font-family: var(--sans); font-size: 12.5px; font-weight: 500; letter-spacing: .15em; padding: 14px 28px; border-color: var(--ink); color: var(--ink); }
+.btn:hover { background: var(--ink); color: var(--white); }
+.btn--solid { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.btn--solid:hover { background: var(--brand); border-color: var(--brand); }
+.btn--light { color: var(--white); border-color: rgba(250,246,241,.85); }
+.link-line { font-family: var(--sans); font-size: 12px; letter-spacing: .15em; }
+
+/* Thanh thông báo */
+.announce { background: var(--ink); color: var(--bg); font-family: var(--sans); font-size: 11px; letter-spacing: .18em; }
+
+/* Header: menu trái — logo giữa — menu phải */
+.header { background: rgba(241, 235, 227, .97); border-bottom: 1px solid rgba(58,50,48,.12); }
+.header__row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; height: var(--header-h); }
+.nav { display: flex; gap: 26px; }
+.nav--left { justify-self: start; }
+.header__right { justify-self: end; display: flex; align-items: center; gap: 26px; }
+.nav a { font-family: var(--sans); font-size: 12.5px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--ink); }
+.nav a::after { background: var(--brand); }
+.logo { justify-self: center; margin: 0; gap: 6px; }
+.logo img { height: 44px; }
+.logo__tag { font-family: var(--sans); font-style: italic; font-weight: 300; font-size: 13.5px; letter-spacing: .02em; color: var(--ink-soft); margin: 10px 0 0 4px; }
+.actions { margin-left: 0; gap: 8px; }
+.lang { border: 0; padding: 0; gap: 0; border-radius: 0; }
+.lang button { background: none; border-radius: 0; font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .12em; padding: 4px 6px; color: var(--muted); }
+.lang button.is-active { background: none; color: var(--ink); text-decoration: underline; text-underline-offset: 5px; }
+.lang button + button { border-left: 1px solid var(--line); }
+@media (max-width: 1280px) {
+  .nav { gap: 18px; }
+  .nav a { font-size: 11.5px; letter-spacing: .12em; }
+  .header__right { gap: 18px; }
+  .logo__tag { display: none; }
+}
+@media (max-width: 1100px) {
+  .nav, .lang--desktop { display: none; }
+  .burger { display: grid; justify-self: start; }
+  .logo__tag { display: inline; }
+}
+@media (max-width: 440px) { .logo__tag { display: none; } }
+.drawer__panel { background: var(--bg-alt); }
+.drawer__panel a { font-family: var(--serif); font-size: 19px; text-transform: uppercase; letter-spacing: .04em; }
+.search-panel { background: var(--bg-alt); }
+.search-panel input { font-family: var(--serif); font-size: 22px; }
+
+/* Nền: tông chủ đạo và dải sáng xen kẽ */
+.section--alt { background: var(--bg-alt); }
+
+/* Hero */
+.hero--strip .hero__title { font-family: var(--serif); font-size: clamp(40px, 5.4vw, 80px); text-transform: none; letter-spacing: .02em; line-height: 1.1; }
+.hero--strip .hero__sub.script-sub,
+.hero__sub.script-sub { font-family: var(--sans); font-style: normal; font-weight: 300; font-size: clamp(16px, 1.5vw, 21px); letter-spacing: .06em; margin: 16px 0 34px; }
+.hero__cue { font-family: var(--sans); }
+
+/* Góc nhìn của Mô */
+.view { background: var(--bg); }
+.view blockquote { font-family: var(--serif); font-style: normal; font-weight: 400; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.65; max-width: 34ch; color: var(--ink); }
+.view__rule { background: var(--line); }
+
+/* Tiêu đề phụ nhỏ đi kèm tiêu đề chính */
+.sub-script { font-family: var(--sans); font-style: normal; font-weight: 300; font-size: clamp(15px, 1.3vw, 18px); letter-spacing: .04em; color: var(--muted); }
+
+/* Thẻ bộ sưu tập kiểu Namia */
+.ccard__title { font-family: var(--serif); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(18px, 1.6vw, 22px); margin: 24px 0 12px; }
+.ccard p { font-size: 15px; color: var(--muted); }
+.coll__txt h3 { text-transform: uppercase; font-size: clamp(22px, 2.2vw, 30px); }
+
+/* Sản phẩm */
+.pcard__name { font-family: var(--sans); font-size: 14px; font-weight: 500; }
+.pcard__meta { color: var(--muted); }
+.pcard__img, .cat, .coll, .mcard, .chapter__img, .bedart__step figure, .scard figure { background: var(--card); }
+.tab { font-family: var(--sans); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+.tab.is-active { border-color: var(--ink); }
+
+/* Chuyện của Mô / trích dẫn */
+.story-split__txt { background: var(--bg-alt); }
+.story-split__txt blockquote { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); line-height: 1.45; }
+.story-split__txt blockquote em { color: var(--brand); }
+.signature { font-family: var(--sans); font-style: italic; font-weight: 300; font-size: 15px; letter-spacing: .04em; color: var(--brand); }
+.quote-band { background: var(--ink); color: var(--bg-alt); }
+.quote-band .eyebrow { color: rgba(241,235,227,.6); }
+.quote-band blockquote { font-family: var(--serif); font-style: normal; font-weight: 400; font-size: clamp(24px, 2.8vw, 40px); line-height: 1.45; max-width: 26ch; }
+.quote-band blockquote em { color: #d9bea6; }
+.quote-band cite { font-family: var(--sans); }
+
+/* Lifestyle */
+.lifestyle__txt h2 { font-size: clamp(30px, 3.6vw, 52px); text-transform: uppercase; line-height: 1.2; }
+
+/* Nghệ thuật làm giường, chất liệu, bền vững */
+.bedart__step .n { font-family: var(--sans); font-style: normal; font-size: 11.5px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brand); }
+.bedart__step h3 { font-size: 18px; text-transform: uppercase; margin: 8px 0 8px; }
+.bedart__step p { color: var(--muted); }
+.mcard .num { font-family: var(--serif); font-weight: 400; font-size: 38px; }
+.mcard h3 { font-size: 17px; text-transform: uppercase; }
+.why__item h3 { font-size: 17px; text-transform: uppercase; }
+.why__icon { color: var(--brand); }
+.sustain__list b { font-family: var(--serif); font-weight: 400; font-size: 30px; color: var(--brand); }
+.sustain__list h3 { font-family: var(--sans); }
+
+/* Ngủ thử */
+.experience { background: var(--bg-alt); }
+.experience__txt .eyebrow { color: var(--brand); }
+.experience__txt li::before { color: var(--brand); }
+
+/* Câu chuyện */
+.scard h3, .stories > .scard:first-child h3, .story-grid .scard h3, .scard.scard--row h3 { font-size: 18px; text-transform: uppercase; line-height: 1.4; }
+.scard:hover h3 { color: var(--brand); }
+
+/* Trang con */
+.page-hero { border-bottom-color: var(--line); }
+.page-hero h1 { font-size: clamp(32px, 4vw, 54px); text-transform: uppercase; line-height: 1.2; }
+.page-hero h1 em { font-style: normal; color: var(--brand); }
+.chapter__txt h2.h-xl { font-size: clamp(30px, 3.6vw, 50px); }
+.article h2 { font-size: 24px; text-transform: uppercase; }
+.article p { font-size: 16.5px; color: var(--ink-soft); }
+.article blockquote { font-family: var(--serif); font-style: normal; font-size: 22px; line-height: 1.6; border-left-color: var(--brand); }
+.article .drop::first-letter { font-family: var(--serif); color: var(--brand); }
+.banner { background: var(--bg-alt); }
+.banner h3 { text-transform: uppercase; font-size: clamp(20px, 2vw, 26px); line-height: 1.35; }
+
+/* Footer tông đậm như Namia */
+.footer { background: var(--ink); color: var(--bg); border-top: 0; }
+.footer__lead h3 { font-family: var(--serif); font-size: 22px; line-height: 1.5; text-transform: uppercase; max-width: 24ch; color: var(--bg-alt); }
+.footer h4 { font-family: var(--serif); font-size: 14px; font-weight: 400; letter-spacing: .1em; color: var(--bg-alt); }
+.footer ul a { color: rgba(225,210,197,.8); }
+.footer ul a:hover { color: var(--white); }
+.footer p, .footer small { color: rgba(225,210,197,.65); }
+.newsletter { background: transparent; border: 1px solid rgba(225,210,197,.5); border-radius: 0; }
+.newsletter input { color: var(--bg-alt); font-family: var(--sans); }
+.newsletter input::placeholder { color: rgba(225,210,197,.7); }
+.footer__bottom { border-top-color: rgba(225,210,197,.2); color: rgba(225,210,197,.6); }
+.footer__social a { color: var(--bg); }
+
+.toast { background: var(--ink); }
