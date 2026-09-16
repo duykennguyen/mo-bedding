@@ -588,3 +588,84 @@ p { margin: 0; }
 }
 .quote-band blockquote em { font-style: italic; color: #e6c9b4; }
 .quote-band cite { font-style: normal; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: rgba(241,236,224,.65); }
+
+/* =========================================================
+   Sửa web — phần 1 (16/09)
+   ========================================================= */
+
+/* Logo kèm dòng "ga gối cho riêng bạn" — chữ mảnh, nhỏ */
+.logo__tag {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 16px; letter-spacing: .01em; color: var(--ink-soft);
+  margin: 8px 0 0 8px; white-space: nowrap;
+}
+.header__row { gap: 28px; }
+.nav { gap: 24px; }
+@media (max-width: 1280px) { .nav { gap: 18px; } .nav a { font-size: 13px; } }
+@media (max-width: 1120px) { .logo__tag { display: none; } }
+@media (max-width: 980px) { .logo__tag { display: inline; font-size: 15px; } }
+@media (max-width: 380px) { .logo__tag { display: none; } }
+
+/* Hero: dải 5 ảnh dọc trượt ngang, chữ đặt trên ảnh */
+.hero--strip { height: clamp(560px, calc(100svh - 102px), 920px); background: var(--green); }
+.hero__track { position: absolute; top: 0; left: 0; height: 100%; display: flex; width: max-content; animation: strip 70s linear infinite; }
+.hero__track img { height: 100%; width: auto; flex: none; margin-right: 6px; object-fit: cover; }
+.hero--strip:hover .hero__track { animation-play-state: paused; }
+@keyframes strip { to { transform: translateX(-50%); } }
+.hero--strip::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(20,16,14,.62) 0%, rgba(20,16,14,.3) 38%, rgba(20,16,14,0) 62%),
+    linear-gradient(0deg, rgba(20,16,14,.45) 0%, rgba(20,16,14,0) 40%);
+}
+.hero--strip .hero__content { z-index: 2; }
+.hero--strip .hero__text > * { opacity: 0; transform: translateY(18px); animation: rise 1.1s var(--ease) forwards; }
+.hero--strip .hero__text > *:nth-child(2) { animation-delay: .15s; }
+.hero--strip .hero__text > *:nth-child(3) { animation-delay: .3s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+.hero--strip .hero__title { font-size: clamp(52px, 7.4vw, 118px); font-weight: 300; max-width: none; letter-spacing: -.01em; }
+.hero--strip .hero__sub.script-sub { font-weight: 300; margin: 12px 0 34px; }
+@media (max-width: 760px) {
+  .hero--strip { height: calc(100svh - 96px); min-height: 520px; }
+  .hero--strip::after { background: linear-gradient(0deg, rgba(20,16,14,.7) 0%, rgba(20,16,14,.15) 55%, rgba(20,16,14,0) 75%); }
+}
+@media (prefers-reduced-motion: reduce) { .hero--strip .hero__text > * { opacity: 1 !important; } }
+
+/* Góc nhìn của Mô — câu quote, không hình ảnh */
+.view { text-align: center; padding: clamp(84px, 11vw, 168px) var(--pad); }
+.view blockquote {
+  margin: 26px auto 0; max-width: 28ch;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: clamp(30px, 3.5vw, 52px); line-height: 1.28; color: var(--ink);
+}
+.view__rule { display: block; width: 1px; height: 56px; margin: 36px auto 0; background: var(--line); }
+
+/* Bộ sưu tập — một hàng ngang 3 thẻ */
+.coll-head { text-align: center; margin-bottom: clamp(36px, 4.4vw, 64px); }
+.coll-head h2 { margin: 12px 0 10px; }
+.sub-script { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 1.7vw, 24px); color: var(--muted); }
+.coll-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.6vw, 40px); }
+.ccard { display: block; }
+.ccard figure { margin: 0; aspect-ratio: 2 / 3; overflow: hidden; background: var(--card); }
+.ccard img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.ccard:hover img { transform: scale(1.04); }
+.ccard__title {
+  font-family: var(--sans); font-weight: 300; text-transform: uppercase; letter-spacing: .04em;
+  font-size: clamp(22px, 2vw, 30px); line-height: 1.2; margin: 26px 0 12px;
+}
+.ccard p { color: var(--muted); font-size: 15px; line-height: 1.75; }
+.coll-more { text-align: center; margin-top: clamp(40px, 4.4vw, 64px); }
+@media (max-width: 760px) {
+  .coll-row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
+  .coll-row::-webkit-scrollbar { display: none; }
+  .ccard { scroll-snap-align: start; }
+}
+
+/* Video nghệ thuật làm giường */
+.film { padding-top: clamp(64px, 8vw, 120px); }
+.film__head { text-align: center; margin-bottom: clamp(28px, 3.4vw, 48px); }
+.film__head h2 { margin-bottom: 10px; }
+.film__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--card); }
+.film__media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.film .bedart { margin-top: clamp(40px, 5vw, 72px); }
+@media (max-width: 760px) { .film__media { aspect-ratio: 3 / 4; } }

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex"><!-- bản demo: bỏ dòng này khi lên web chính thức -->
-  <title>Mô Bedding · Ru Tình — ga gối cho riêng bạn</title>
-  <meta name="description" content="Mô Bedding — chăn ga có tác giả. Vỏ gối vẽ tay, lụa tre mềm mát, làm từng mẻ nhỏ. Bộ sưu tập Nhã, Hush Hush, Human Love Letters.">
+  <title>Mô Bedding · You.me.bed.now — vỏ chăn, vỏ gối, vỏ bọc tâm hồn</title>
+  <meta name="description" content="Mô Bedding — ga gối cho riêng bạn. Vỏ chăn, vỏ gối, vỏ bọc tâm hồn. Bộ sưu tập Nhã, Hush Hush, Human Love Letters.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="home">
@@ -16,128 +16,76 @@
 
 <main>
 
-  <!-- 1. HERO -->
-  <section class="hero" aria-label="Giới thiệu">
-    <div class="hero__slide is-active">
-      <img src="assets/img/hero-1.jpg" alt="Giường trải ga gối vẽ tay của Mô Bedding">
-      <div class="hero__content"><div class="wrap hero__text">
-        <p class="eyebrow">Mô Bedding</p>
-        <h1 class="hero__title"><em>Ru Tình</em></h1>
-        <p class="hero__sub script-sub">ga gối cho riêng bạn</p>
-        <a class="btn btn--light" href="collections.html" data-en="Discover the collections">Khám phá bộ sưu tập</a>
-      </div></div>
+  <!-- 1. HERO — 5 ảnh chạy thành dải, chữ trên ảnh -->
+  <section class="hero hero--strip" aria-label="Giới thiệu">
+    <div class="hero__track" aria-hidden="true">
+      <img src="assets/img/hero-s3.jpg" width="960" height="1280" alt="">
+      <img src="assets/img/hero-s4.jpg" width="720" height="1280" alt="">
+      <img src="assets/img/hero-s2.jpg" width="1254" height="1280" alt="">
+      <img src="assets/img/hero-s1.jpg" width="788" height="1400" alt="">
+      <img src="assets/img/hero-s5.jpg" width="788" height="1400" alt="">
+      <img src="assets/img/hero-s3.jpg" width="960" height="1280" alt="">
+      <img src="assets/img/hero-s4.jpg" width="720" height="1280" alt="">
+      <img src="assets/img/hero-s2.jpg" width="1254" height="1280" alt="">
+      <img src="assets/img/hero-s1.jpg" width="788" height="1400" alt="">
+      <img src="assets/img/hero-s5.jpg" width="788" height="1400" alt="">
     </div>
-    <div class="hero__cue" aria-hidden="true"><span></span>cuộn xuống</div>
-    <div class="hero__dots"></div>
-  </section>
-
-  <!-- 2. BỘ SƯU TẬP -->
-  <section class="section" id="collections">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow" data-en="Collections">Bộ sưu tập</p>
-          <h2 class="h-lg" data-en="Three letters, written to your sleep">Ba lá thư, gửi vào giấc ngủ</h2>
-        </div>
-        <a class="link-line" href="collections.html"><span data-en="All collections">Tất cả bộ sưu tập</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></a>
-      </div>
-      <div class="collections reveal-stagger">
-        <a class="coll" href="collections.html#nha">
-          <img src="assets/img/coll-nha.jpg" alt="Bộ sưu tập Nhã" loading="lazy">
-          <div class="coll__txt">
-            <p class="eyebrow" data-en="Collection 01">Bộ sưu tập 01</p>
-            <h3>Nhã</h3>
-            <p data-en="Soft goodnights: “Dream a little dream of me”, “Goodnight, love”.">Những lời chúc ngủ ngon thật khẽ: “Dream a little dream of me”, “Goodnight, love”.</p>
-          </div>
-        </a>
-        <a class="coll" href="collections.html#hush-hush">
-          <img src="assets/img/coll-hush.jpg" alt="Bộ sưu tập Hush Hush" loading="lazy">
-          <div class="coll__txt">
-            <p class="eyebrow" data-en="Collection 02">Bộ sưu tập 02</p>
-            <h3>Hush Hush</h3>
-            <p data-en="Shh… “Let the world do its thing, and go to sleep.”">Suỵt… “Let the world do its thing, and go to sleep.”</p>
-          </div>
-        </a>
-        <a class="coll" href="collections.html#human-love-letters">
-          <img src="assets/img/coll-hll.jpg" alt="Bộ sưu tập Human Love Letters" loading="lazy">
-          <div class="coll__txt">
-            <p class="eyebrow" data-en="Collection 03">Bộ sưu tập 03</p>
-            <h3>Human Love Letters</h3>
-            <p data-en="Figures drawn in one unbroken line — love letters to the people we love, and to you.">Những dáng người vẽ bằng một nét liền — thư tình gửi người mình thương, và gửi chính bạn.</p>
-            <span class="coll__more" data-en="Explore">Khám phá</span>
-          </div>
-        </a>
-        <a class="coll coll--throw" href="collections.html#throw">
-          <img src="assets/img/coll-throw.jpg" alt="Chăn throw vẽ tay của Mô" loading="lazy">
-          <div class="coll__txt">
-            <p class="eyebrow" data-en="Throws · 11 artworks">Chăn throw · 11 artwork</p>
-            <h3 data-en="A painting at the foot of the bed">Một bức tranh cuối giường</h3>
-            <p data-en="Draped over the bed, or around your shoulders at dusk.">Vắt hờ cuối giường, hay choàng lên vai lúc chiều muộn.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. LỰA CHỌN CỦA BẠN -->
-  <section class="section section--alt" data-rail="">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow" data-en="Your choice">Lựa chọn của bạn</p>
-          <h2 class="h-lg" data-en="Pieces for your bed">Những món cho chiếc giường của bạn</h2>
-          <div class="tabs" style="margin-top:18px">
-            <button class="tab is-active" data-filter="all" data-en="All">Tất cả</button>
-            <button class="tab" data-filter="pillow" data-en="Pillowcases">Vỏ gối</button>
-            <button class="tab" data-filter="throw">Throw</button>
-            <button class="tab" data-filter="set" data-en="Bedding">Chăn ga</button>
-            <button class="tab" data-filter="insert" data-en="Inserts">Ruột &amp; phụ kiện</button>
-          </div>
-        </div>
-        <div class="carousel-nav">
-          <button aria-label="Trước"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12H5m5-6-6 6 6 6"/></svg></button>
-          <button aria-label="Sau"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></button>
-        </div>
-      </div>
-      <div class="products"></div>
-      <div class="center mt-48"><a class="btn" href="shop.html" data-en="See everything">Xem tất cả sản phẩm</a></div>
-    </div>
-  </section>
-
-  <!-- 4. CHUYỆN CỦA MÔ -->
-  <section class="story-split">
-    <div class="story-split__img img-reveal">
-      <img src="assets/img/story-brand.jpg" alt="Tay vuốt phẳng tấm ga buổi sáng" loading="lazy">
-    </div>
-    <div class="story-split__txt reveal">
-      <p class="eyebrow" data-en="Our story">Chuyện của Mô</p>
-      <blockquote data-en="Every morning, five minutes for <em>the lover</em> who held you all night.">Mỗi sáng, dành năm phút cho <em>người tình</em> đã ôm mình suốt đêm.</blockquote>
-      <p data-en="We believe bedding needs more than softness or beauty — it needs the warmth of a human hand. So every design is drawn by hand and signed with a small red line in the corner: someone made this, slowly, for you.">Mô tin chăn gối không chỉ cần mềm hay đẹp, mà cần cả hơi ấm của một bàn tay. Nên từng mẫu gối được vẽ tay, ký một nét đỏ nhỏ nơi góc: có người đã chậm rãi làm ra thứ này, cho bạn.</p>
-      <p class="signature">— Mô Đi Phê</p>
-      <a class="link-line" href="about.html"><span data-en="Read our story">Đọc chuyện của Mô</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></a>
-    </div>
-  </section>
-
-  <!-- 5. LIFESTYLE -->
-  <section class="lifestyle">
-    <img data-parallax src="assets/img/lifestyle.jpg" alt="Nắng buổi sáng xiên qua cửa sổ phòng ngủ nhà Mô" loading="lazy">
-    <div class="lifestyle__txt"><div class="wrap reveal">
-      <p class="eyebrow" style="color:rgba(253,251,248,.8)" data-en="Mornings at Mô">Buổi sáng ở nhà Mô</p>
-      <h2 data-en="Sunlight through <em>the shutters.</em>">Nắng xiên qua <em>khe cửa.</em></h2>
-      <p data-en="Stay a little longer. Run your hand over the sheet that held you all night, and feel full enough to greet a happy new day.">Nằm thêm chút nữa, vuốt ve tấm ga đã ôm mình suốt đêm, rồi thấy lòng đủ đầy để đón một ngày mới vui.</p>
-      <a class="btn btn--light" href="stories.html" data-en="Read the stories">Đọc những câu chuyện</a>
+    <div class="hero__content"><div class="wrap hero__text">
+      <h1 class="hero__title"><em>You.me.bed.now</em></h1>
+      <p class="hero__sub script-sub">vỏ chăn, vỏ gối, vỏ bọc tâm hồn</p>
+      <a class="btn btn--light" href="collections.html" data-en="Discover the collections">Khám phá bộ sưu tập</a>
     </div></div>
+    <div class="hero__cue" aria-hidden="true"><span></span>cuộn xuống</div>
   </section>
 
-  <!-- 6. MAKING BED -->
-  <section class="section">
+  <!-- 2. GÓC NHÌN CỦA MÔ — core value, không hình ảnh -->
+  <section class="view reveal">
+    <p class="eyebrow" data-en="Mô's point of view">Góc nhìn của Mô</p>
+    <blockquote data-en="“From the colour of a duvet to the line on a pillow, Mô looks for ways to breathe the warmth of an unhurried, slow way of living into the corners of your home.”">“từ màu chăn, đến nét gối, mô tìm cách thổi hơi ấm của lối sống thong thả, chậm rãi vào những góc nhà của bạn”</blockquote>
+    <span class="view__rule" aria-hidden="true"></span>
+  </section>
+
+  <!-- 3. BỘ SƯU TẬP — hàng ngang 3 bộ -->
+  <section class="section" id="collections" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow" data-en="The art of making bed">Nghệ thuật làm giường · Making bed</p>
-          <h2 class="h-lg" data-en="Five minutes each morning, for a lovelier bed">Năm phút mỗi sáng, cho chiếc giường thêm xinh</h2>
-        </div>
-        <a class="link-line" href="about.html#making-bed"><span data-en="The full guide">Xem hướng dẫn</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></a>
+      <div class="coll-head reveal">
+        <p class="eyebrow">pillows talk</p>
+        <h2 class="h-xl" data-en="Collections">Bộ sưu tập</h2>
+        <p class="sub-script" data-en="Letters, sent into your sleep">Những lá thư, gửi vào giấc ngủ</p>
+      </div>
+      <div class="coll-row reveal-stagger">
+        <a class="ccard" href="collections.html#nha">
+          <figure><img src="assets/img/coll2-nha.jpg" alt="Bộ sưu tập Nhã" loading="lazy" style="object-position:50% 100%"></figure>
+          <h3 class="ccard__title">Nhã</h3>
+          <p data-en="The softest voice in the house. A handwritten line, a small heart, a dragonfly — and a goodnight whispered close to your ear.">Giọng nói khẽ nhất trong nhà. Một dòng chữ viết tay, một trái tim nhỏ, một cánh chuồn chuồn — và lời chúc ngủ ngon thì thầm sát bên tai.</p>
+        </a>
+        <a class="ccard" href="collections.html#hush-hush">
+          <figure><img src="assets/img/coll2-hush.jpg" alt="Bộ sưu tập Hush Hush" loading="lazy" style="object-position:50% 0%"></figure>
+          <h3 class="ccard__title">Hush Hush</h3>
+          <p data-en="For the nights that need a little coaxing. Playful, tender words telling you to put the phone down, let the day go — you did well today.">Dành cho những đêm cần được dỗ dành. Câu chữ tinh nghịch mà dịu dàng, bảo bạn buông điện thoại, buông cả ngày dài — hôm nay bạn đã giỏi lắm rồi.</p>
+        </a>
+        <a class="ccard" href="collections.html#human-love-letters">
+          <figure><img src="assets/img/coll2-hll.jpg" alt="Bộ sưu tập Human Love Letters" loading="lazy" style="object-position:50% 100%"></figure>
+          <h3 class="ccard__title">Human Love Letters</h3>
+          <p data-en="Figures drawn in one unbroken line — love letters to the people we love, and to you, tired yet lovely at the end of the day.">Những dáng người vẽ bằng một nét liền — thư tình gửi người mình thương, và gửi chính bạn, mệt nhoài mà vẫn đáng yêu vào cuối ngày.</p>
+        </a>
+      </div>
+      <div class="coll-more reveal"><a class="btn" href="collections.html" data-en="See more collections">Xem thêm bộ sưu tập</a></div>
+    </div>
+  </section>
+
+  <!-- 4. VIDEO — Nghệ thuật làm giường -->
+  <section class="section film section--alt" id="making-bed">
+    <div class="wrap">
+      <div class="film__head reveal">
+        <h2 class="h-xl" data-en="The Art of Making Bed">Nghệ thuật làm giường</h2>
+        <p class="sub-script" data-en="The folds of a bed, the roots of a home">Nếp giường nếp chiếu, gốc rễ gia phong</p>
+      </div>
+      <div class="film__media reveal">
+        <video muted autoplay loop playsinline preload="metadata"
+          data-wide="assets/video/making-bed-wide.mp4" data-tall="assets/video/making-bed-tall.mp4"
+          data-poster-wide="assets/img/film-wide.jpg" data-poster-tall="assets/img/film-tall.jpg"
+          poster="assets/img/film-wide.jpg" aria-label="Video: một buổi sáng thong thả trên chiếc giường của Mô"></video>
       </div>
       <div class="bedart reveal-stagger">
         <div class="bedart__step">
@@ -168,7 +116,57 @@
     </div>
   </section>
 
-  <!-- 7. TRÍCH TỪ KHO CHUYỆN CỦA MÔ -->
+  <!-- 5. LỰA CHỌN CỦA BẠN -->
+  <section class="section" data-rail="">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow" data-en="Your choice">Lựa chọn của bạn</p>
+          <h2 class="h-lg" data-en="Pieces for your bed">Những món cho chiếc giường của bạn</h2>
+          <div class="tabs" style="margin-top:18px">
+            <button class="tab is-active" data-filter="all" data-en="All">Tất cả</button>
+            <button class="tab" data-filter="pillow" data-en="Pillowcases">Vỏ gối</button>
+            <button class="tab" data-filter="throw">Throw</button>
+            <button class="tab" data-filter="set" data-en="Bedding">Chăn ga</button>
+            <button class="tab" data-filter="insert" data-en="Inserts">Ruột &amp; phụ kiện</button>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button aria-label="Trước"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12H5m5-6-6 6 6 6"/></svg></button>
+          <button aria-label="Sau"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="products"></div>
+      <div class="center mt-48"><a class="btn" href="shop.html" data-en="See everything">Xem tất cả sản phẩm</a></div>
+    </div>
+  </section>
+
+  <!-- 6. CHUYỆN CỦA MÔ -->
+  <section class="story-split">
+    <div class="story-split__img img-reveal">
+      <img src="assets/img/story-brand.jpg" alt="Tay vuốt phẳng tấm ga buổi sáng" loading="lazy">
+    </div>
+    <div class="story-split__txt reveal">
+      <p class="eyebrow" data-en="About Mô">Về Mô</p>
+      <blockquote data-en="Every morning, five minutes for <em>the lover</em> who held you all night.">Mỗi sáng, dành năm phút cho <em>người tình</em> đã ôm mình suốt đêm.</blockquote>
+      <p data-en="We believe bedding needs more than softness or beauty — it needs the warmth of a human hand. So every design is drawn by hand and signed with a small red line in the corner: someone made this, slowly, for you.">Mô tin chăn gối không chỉ cần mềm hay đẹp, mà cần cả hơi ấm của một bàn tay. Nên từng mẫu gối được vẽ tay, ký một nét đỏ nhỏ nơi góc: có người đã chậm rãi làm ra thứ này, cho bạn.</p>
+      <p class="signature">— Mô Đi Phê</p>
+      <a class="link-line" href="about.html"><span data-en="About Mô">Về Mô</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- 7. LIFESTYLE -->
+  <section class="lifestyle">
+    <img data-parallax src="assets/img/lifestyle.jpg" alt="Nắng buổi sáng xiên qua cửa sổ phòng ngủ nhà Mô" loading="lazy">
+    <div class="lifestyle__txt"><div class="wrap reveal">
+      <p class="eyebrow" style="color:rgba(253,251,248,.8)" data-en="Mornings at Mô">Buổi sáng ở nhà Mô</p>
+      <h2 data-en="Sunlight through <em>the shutters.</em>">Nắng xiên qua <em>khe cửa.</em></h2>
+      <p data-en="Stay a little longer. Run your hand over the sheet that held you all night, and feel full enough to greet a happy new day.">Nằm thêm chút nữa, vuốt ve tấm ga đã ôm mình suốt đêm, rồi thấy lòng đủ đầy để đón một ngày mới vui.</p>
+      <a class="btn btn--light" href="stories.html" data-en="Read the stories">Đọc những câu chuyện</a>
+    </div></div>
+  </section>
+
+  <!-- 8. TRÍCH TỪ KHO CHUYỆN CỦA MÔ -->
   <section class="quote-band reveal">
     <div class="wrap">
       <p class="eyebrow">Mô Bedding kể chuyện</p>
@@ -177,7 +175,7 @@
     </div>
   </section>
 
-  <!-- 8. NGỦ THỬ Ở NHÀ MÔ -->
+  <!-- 9. NGỦ THỬ Ở NHÀ MÔ -->
   <section class="experience" id="trai-nghiem">
     <div class="experience__img img-reveal">
       <img src="assets/img/experience.jpg" alt="Phòng ngủ ở một căn nhà của Mô tại Hội An" loading="lazy">
@@ -196,12 +194,12 @@
     </div>
   </section>
 
-  <!-- 9. MÔ STORIES -->
+  <!-- 10. MÔ BEDDING KỂ CHUYỆN -->
   <section class="section section--alt">
     <div class="wrap">
       <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">Mô Stories</p>
+          <p class="eyebrow">Mô Bedding kể chuyện</p>
           <h2 class="h-lg" data-en="Read one before bed">Đọc một chuyện trước khi ngủ</h2>
         </div>
         <a class="btn" href="stories.html" data-en="All stories">Xem tất cả câu chuyện</a>

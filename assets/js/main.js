@@ -85,9 +85,9 @@ const SOCIAL = {
 const NAV = [
   ['collections.html', 'Bộ sưu tập', 'Collections', 'collections'],
   ['shop.html', 'Sản phẩm', 'Shop', 'shop'],
-  ['about.html', 'Chuyện của Mô', 'Our Story', 'about'],
-  ['about.html#making-bed', 'Nghệ thuật làm giường', 'Making Bed', 'bedart'],
-  ['stories.html', 'Mô Stories', 'Mô Stories', 'stories'],
+  ['about.html#making-bed', 'Nghệ thuật làm giường', 'The Art of Making Bed', 'bedart'],
+  ['stories.html', 'Mô Bedding kể chuyện', 'Mo Bedding Stories', 'stories'],
+  ['about.html', 'Về Mô', 'About Us', 'about'],
 ];
 
 function renderHeader() {
@@ -103,7 +103,7 @@ function renderHeader() {
       <button class="icon-btn burger" id="burger" aria-label="Menu">${ICON.menu}</button>
       <a class="logo" href="index.html" aria-label="Mô Bedding — Trang chủ">
         <img src="assets/img/logo-mark.png" alt="Mô">
-        <span class="logo__word">Bedding</span>
+        <span class="logo__tag">ga gối cho riêng bạn</span>
       </a>
       <nav class="nav" aria-label="Menu chính">${links}</nav>
       <div class="actions">
@@ -360,6 +360,7 @@ function initHero() {
   if (!hero) return;
   const slides = $$('.hero__slide', hero);
   const dots = $('.hero__dots', hero);
+  if (!slides.length) return;
   let i = 0, timer;
   if (slides.length < 2) { dots.remove(); slides[0].classList.add('is-active'); return; }
   dots.innerHTML = slides.map((_, k) => `<button aria-label="Slide ${k + 1}"></button>`).join('');
@@ -372,6 +373,25 @@ function initHero() {
   };
   $$('button', dots).forEach((d, k) => d.addEventListener('click', () => go(k)));
   go(0);
+}
+
+/* ---------- Video: khung ngang trên máy tính, khung dọc 3:4 trên điện thoại ---------- */
+function initFilms() {
+  const vids = $$('video[data-wide]');
+  if (!vids.length) return;
+  const mq = matchMedia('(max-width: 760px)');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pick = () => vids.forEach(v => {
+    const src = mq.matches ? v.dataset.tall : v.dataset.wide;
+    if (v.getAttribute('src') === src) return;
+    v.poster = mq.matches ? v.dataset.posterTall : v.dataset.posterWide;
+    v.src = src;
+    if (still) { v.removeAttribute('autoplay'); v.controls = true; return; }
+    v.load();
+    v.play().catch(() => {});
+  });
+  mq.addEventListener ? mq.addEventListener('change', pick) : mq.addListener(pick);
+  pick();
 }
 
 /* ---------- Hiệu ứng cuộn ---------- */
@@ -417,6 +437,7 @@ renderHeader();
 renderFooter();
 initChrome();
 initHero();
+initFilms();
 initProductRails();
 initShop();
 bindAddButtons($('main') || document);
