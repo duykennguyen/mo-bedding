@@ -1009,3 +1009,23 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 .coll-more { text-align: left; }
 .hub__head { text-align: left; max-width: none; margin-left: 0; margin-right: 0; }
 .hub__intro { max-width: 78ch; }
+
+/* =========================================================
+   Sửa web — phần 5 (16/09): Sản phẩm 3 thẻ · Về Mô gọn chữ
+   ========================================================= */
+.pcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 2.6vw, 40px); }
+.pcat { display: flex; flex-direction: column; align-items: flex-start; }
+.pcat__img { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: var(--card); }
+.pcat__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.pcat:hover .pcat__img img { transform: scale(1.04); }
+.pcat__title { font-family: var(--serif); font-weight: 400; text-transform: uppercase; font-size: clamp(22px, 2.1vw, 30px); line-height: 1.25; letter-spacing: .01em; margin: 28px 0 16px; }
+.pcat p { font-weight: 300; font-size: clamp(15px, 1.15vw, 17px); line-height: 1.8; color: var(--muted); margin-bottom: 28px; flex: 1; }
+.pcat .btn { padding: 14px 32px; }
+@media (max-width: 900px) { .pcards { grid-template-columns: 1fr; gap: 48px; } }
+
+/* Về Mô: chữ nhỏ lại cho tinh tế */
+.mission { min-height: clamp(500px, 74vh, 700px); }
+.mission__txt { max-width: 540px; }
+.mission__kicker { font-size: 12px; letter-spacing: .24em; margin-bottom: 16px; }
+.mission__title { font-size: clamp(17px, 1.55vw, 22px); line-height: 1.85; letter-spacing: .01em; margin-bottom: 32px; }
+.mission .btn--dark { font-size: 11.5px; padding: 14px 34px; }
