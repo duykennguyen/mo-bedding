@@ -96,27 +96,23 @@ function renderHeader() {
   const page = document.body.dataset.page;
   const link = ([href, vi, en, key]) =>
     `<a href="${href}" data-en="${en}" ${key === page ? 'aria-current="page"' : ''}>${vi}</a>`;
-  const left = NAV.slice(0, 3).map(link).join('');
-  const right = NAV.slice(3).map(link).join('');
+  const links = NAV.map(link).join('');
   host.outerHTML = `
   <div class="announce" data-en="Free shipping on orders from 1,500,000₫ · 7-day returns">Miễn phí giao hàng cho đơn từ 1.500.000₫ · Đổi trả trong 7 ngày</div>
   <header class="header" id="header">
     <div class="wrap header__row">
       <button class="icon-btn burger" id="burger" aria-label="Menu">${ICON.menu}</button>
-      <nav class="nav nav--left" aria-label="Menu chính">${left}</nav>
       <a class="logo" href="index.html" aria-label="Mô Bedding — Trang chủ">
         <img src="assets/img/logo-mark.png" alt="Mô">
         <span class="logo__tag">ga gối cho riêng bạn</span>
       </a>
-      <div class="header__right">
-        <nav class="nav nav--right" aria-label="Menu phụ">${right}</nav>
-        <div class="actions">
-          <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm" data-en-aria="Search">${ICON.search}</button>
-          <div class="lang lang--desktop" role="group" aria-label="Ngôn ngữ">
-            <button data-lang="vi">VI</button><button data-lang="en">EN</button>
-          </div>
-          <a class="icon-btn" href="#" id="cartBtn" aria-label="Giỏ hàng" data-en-aria="Cart">${ICON.bag}<span class="cart-count" id="cartCount">0</span></a>
+      <nav class="nav" aria-label="Menu chính">${links}</nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm" data-en-aria="Search">${ICON.search}</button>
+        <div class="lang lang--desktop" role="group" aria-label="Ngôn ngữ">
+          <button data-lang="vi">VI</button><button data-lang="en">EN</button>
         </div>
+        <a class="icon-btn" href="#" id="cartBtn" aria-label="Giỏ hàng" data-en-aria="Cart">${ICON.bag}<span class="cart-count" id="cartCount">0</span></a>
       </div>
     </div>
     <div class="search-panel" id="searchPanel">
@@ -373,7 +369,7 @@ function initHero() {
     slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
     $$('button', dots).forEach((d, k) => { d.classList.remove('is-active'); if (k === i) { void d.offsetWidth; d.classList.add('is-active'); } });
     clearTimeout(timer);
-    timer = setTimeout(() => go(i + 1), 6000);
+    timer = setTimeout(() => go(i + 1), 5000);
   };
   $$('button', dots).forEach((d, k) => d.addEventListener('click', () => go(k)));
   go(0);

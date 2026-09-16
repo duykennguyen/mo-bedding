@@ -16,42 +16,33 @@
 
 <main>
 
-  <!-- 1. HERO — 5 ảnh chạy thành dải, chữ trên ảnh -->
-  <section class="hero hero--strip" aria-label="Giới thiệu">
-    <div class="hero__track" aria-hidden="true">
-      <img src="assets/img/hero-s3.jpg" width="960" height="1280" alt="">
-      <img src="assets/img/hero-s4.jpg" width="720" height="1280" alt="">
-      <img src="assets/img/hero-s2.jpg" width="1254" height="1280" alt="">
-      <img src="assets/img/hero-s1.jpg" width="788" height="1400" alt="">
-      <img src="assets/img/hero-s5.jpg" width="788" height="1400" alt="">
-      <img src="assets/img/hero-s3.jpg" width="960" height="1280" alt="">
-      <img src="assets/img/hero-s4.jpg" width="720" height="1280" alt="">
-      <img src="assets/img/hero-s2.jpg" width="1254" height="1280" alt="">
-      <img src="assets/img/hero-s1.jpg" width="788" height="1400" alt="">
-      <img src="assets/img/hero-s5.jpg" width="788" height="1400" alt="">
-    </div>
+  <!-- 1. HERO — slide từng ảnh, tự chuyển sau 5 giây -->
+  <section class="hero hero--slides" aria-label="Giới thiệu">
+    <div class="hero__slide is-active"><img class="hero__bg" src="assets/img/hero-s3.jpg" alt=""><img class="hero__fg" src="assets/img/hero-s3.jpg" alt="Gối vẽ tay của Mô trên ga xanh bạc hà"></div>
+    <div class="hero__slide"><img class="hero__bg" src="assets/img/hero-s4.jpg" alt=""><img class="hero__fg" src="assets/img/hero-s4.jpg" alt="Gối và chăn Mô phối màu vàng, xám"></div>
+    <div class="hero__slide"><img class="hero__bg" src="assets/img/hero-s2.jpg" alt=""><img class="hero__fg" src="assets/img/hero-s2.jpg" alt="Gối Mô với dòng chữ where do you go when you fall asleep"></div>
+    <div class="hero__slide"><img class="hero__bg" src="assets/img/hero-s1.jpg" alt=""><img class="hero__fg" src="assets/img/hero-s1.jpg" alt="Bedding selection — come back to bed"></div>
+    <div class="hero__slide"><img class="hero__bg" src="assets/img/hero-s5.jpg" alt=""><img class="hero__fg" src="assets/img/hero-s5.jpg" alt="Mô Đi Phê — chăn ga gối đệm, vỏ bọc tâm hồn"></div>
     <div class="hero__content"><div class="wrap hero__text">
-      <h1 class="hero__title"><em>You.me.bed.now</em></h1>
+      <h1 class="hero__title">You.me.bed.now</h1>
       <p class="hero__sub script-sub">vỏ chăn, vỏ gối, vỏ bọc tâm hồn</p>
       <a class="btn btn--light" href="collections.html" data-en="Discover the collections">Khám phá bộ sưu tập</a>
     </div></div>
-    <div class="hero__cue" aria-hidden="true"><span></span>cuộn xuống</div>
+    <div class="hero__dots"></div>
   </section>
 
   <!-- 2. GÓC NHÌN CỦA MÔ — core value, không hình ảnh -->
   <section class="view reveal">
     <p class="eyebrow" data-en="Mô's point of view">Góc nhìn của Mô</p>
     <blockquote data-en="“From the colour of a duvet to the line on a pillow, Mô looks for ways to breathe the warmth of an unhurried, slow way of living into the corners of your home.”">“từ màu chăn, đến nét gối, mô tìm cách thổi hơi ấm của lối sống thong thả, chậm rãi vào những góc nhà của bạn”</blockquote>
-    <span class="view__rule" aria-hidden="true"></span>
   </section>
 
   <!-- 3. BỘ SƯU TẬP — hàng ngang 3 bộ -->
   <section class="section" id="collections" style="padding-top:0">
     <div class="wrap">
       <div class="coll-head reveal">
-        <p class="eyebrow">pillows talk</p>
-        <h2 class="h-xl" data-en="Collections">Bộ sưu tập</h2>
-        <p class="sub-script" data-en="Letters, sent into your sleep">Những lá thư, gửi vào giấc ngủ</p>
+        <p class="sec-kicker" data-en="Letters, sent into your sleep">Những lá thư, gửi vào giấc ngủ</p>
+        <h2 class="sec-title" data-en="Collections">Bộ sưu tập</h2>
       </div>
       <div class="coll-row reveal-stagger">
         <a class="ccard" href="collections.html#nha">
@@ -78,9 +69,8 @@
   <section class="section section--alt" id="san-pham">
     <div class="wrap">
       <div class="coll-head reveal">
-        <p class="eyebrow">let us handle the rest</p>
-        <h2 class="h-xl" data-en="Products">Sản phẩm</h2>
-        <p class="sub-script" data-en="Sleep that nourishes body and soul">Giấc ngủ nuôi dưỡng thân tâm</p>
+        <p class="sec-kicker" data-en="Sleep that nourishes body and soul">Giấc ngủ nuôi dưỡng thân tâm</p>
+        <h2 class="sec-title" data-en="Products">Sản phẩm</h2>
       </div>
       <div class="prod-row reveal-stagger">
         <a href="shop.html"><img src="assets/img/prod-1.jpg" alt="Vỏ gối vẽ tay họa tiết cành lá của Mô" loading="lazy"></a>
@@ -108,8 +98,8 @@
         <div class="feature__left reveal">
           <figure class="feature__small"><img src="assets/img/mb-small.jpg" alt="Bàn tay vuốt tấm throw và gối vẽ tay" loading="lazy"></figure>
           <div class="feature__txt">
-            <p class="feature__kicker" data-en="five minutes for the lover who held you all night">dành năm phút cho người tình đã ôm mình suốt đêm</p>
-            <h2 class="feature__title" data-en="The Art of Making Bed">Nghệ thuật làm giường</h2>
+            <p class="sec-kicker feature__kicker" data-en="five minutes for the lover who held you all night">dành năm phút cho người tình đã ôm mình suốt đêm</p>
+            <h2 class="sec-title feature__title" data-en="The Art of Making Bed">Nghệ thuật làm giường</h2>
             <p class="feature__body" data-en="We still can't find the right Vietnamese word for “making bed”. Tidying the bed? Folding the duvet? Smoothing the sheet again? None feels quite right — but spending a few minutes making the bed lovely feels very Mô.">Không biết nên gọi “making bed” bằng tiếng Việt là gì cho đúng. Dọn giường? Xếp chăn? Trải lại ga? Chưa từ nào thật sự vừa ý — nhưng cảm giác dành vài phút làm chiếc giường đẹp lên thì rất Mô.</p>
             <a class="link-line" href="about.html#making-bed"><span data-en="See the art of making bed">Xem nghệ thuật làm giường</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h15m-5-6 6 6-6 6"/></svg></a>
           </div>
@@ -124,8 +114,8 @@
     <div class="wrap">
       <div class="offer__head reveal">
         <div>
-          <p class="feature__kicker" data-en="try a night with mô">thử một đêm cùng mô</p>
-          <h2 class="offer__title" data-en="Mô Bedding at the hotel">Trải nghiệm Mô Bedding tại khách sạn</h2>
+          <p class="sec-kicker feature__kicker" data-en="try a night with mô">thử một đêm cùng mô</p>
+          <h2 class="sec-title offer__title" data-en="Mô Bedding at the hotel">Trải nghiệm Mô Bedding tại khách sạn</h2>
         </div>
         <div class="offer__intro">
           <p data-en="In Hội An, every Mô home is dressed in Mô bedding. Lie down, pull the duvet up to your chin, and let the fabric tell you the rest.">Ở Hội An, những căn nhà của Mô đều được sắp đặt ga gối Mô. Hãy nằm xuống, kéo chăn lên tới cằm, và để làn vải tự kể phần còn lại.</p>
@@ -153,8 +143,8 @@
   <section class="section hub" id="ke-chuyen">
     <div class="wrap">
       <div class="hub__head reveal">
-        <p class="feature__kicker" data-en="thoughts and memories of the bed, kept through the years">gửi gắm suy nghĩ và kỷ niệm với chiếc giường qua từng tháng năm</p>
-        <h2 class="hub__title" data-en="Mo Bedding Stories">Mô Bedding kể chuyện</h2>
+        <p class="sec-kicker feature__kicker" data-en="thoughts and memories of the bed, kept through the years">gửi gắm suy nghĩ và kỷ niệm với chiếc giường qua từng tháng năm</p>
+        <h2 class="sec-title hub__title" data-en="Mo Bedding Stories">Mô Bedding kể chuyện</h2>
         <p class="hub__intro" data-en="Mô wants to share the quietly different experiences of cherishing sleep and holding yourself close at the end of each day, resting in the bed you love. Through every story, Mô keeps thoughts and memories, and opens new ways of seeing — so each of us can discover our own bed anew, connect more deeply with ourselves, and love ourselves a little more every day.">Mô muốn chia sẻ với mọi người về những trải nghiệm thật khác khi nâng niu giấc ngủ cũng như việc ôm ấp bản thân mình sau mỗi ngày, được nghỉ ngơi trên chiếc giường thân yêu của mình. Qua từng bài viết Mô muốn lưu giữ những suy tư, ký ức và mở ra những góc nhìn mới để mỗi người tự khám phá cho mình những trải nghiệm thật khác về chiếc giường và kết nối sâu sắc hơn với bản thân, yêu thương mình nhiều hơn mỗi ngày.</p>
       </div>
       <div class="hub__grid">
