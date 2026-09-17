@@ -1164,3 +1164,12 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 @media (max-width: 1100px) { .logo__tag { font-size: 13px; } }
 @media (max-width: 560px) { .logo__tag { font-size: 11px; } }
 @media (max-width: 360px) { .logo__tag { font-size: 10px; } }
+
+/* =========================================================
+   Chốt tagline (17/09): font số 16 Qwitcher Grypen, màu đen
+   ========================================================= */
+.logo__tag { font-family: "Qwitcher Grypen", cursive; font-weight: 400; font-size: 24px; letter-spacing: 0; color: #1a1716; margin: 10px 0 0 8px; }
+@media (max-width: 1240px) { .logo__tag { font-size: 23px; } }
+@media (max-width: 1100px) { .logo__tag { font-size: 23px; } }
+@media (max-width: 560px) { .logo__tag { font-size: 19px; margin: 8px 0 0 5px; } }
+@media (max-width: 360px) { .logo__tag { font-size: 17px; } }
