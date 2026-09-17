@@ -87,7 +87,7 @@ const NAV = [
   ['shop.html', 'Sản phẩm', 'Shop', 'shop'],
   ['about.html#making-bed', 'Nghệ thuật làm giường', 'The Art of Making Bed', 'bedart'],
   ['stories.html', 'Mô Bedding kể chuyện', 'Mo Bedding Stories', 'stories'],
-  ['about.html', 'Về Mô', 'About Us', 'about'],
+  ['about.html', 'Về chúng tôi', 'About Us', 'about'],
 ];
 
 function renderHeader() {
@@ -102,14 +102,14 @@ function renderHeader() {
   <header class="header" id="header">
     <div class="wrap header__row">
       <button class="icon-btn burger" id="burger" aria-label="Menu">${ICON.menu}</button>
-      <a class="logo" href="index.html" aria-label="Mô Bedding — Trang chủ">
+      <a class="logo" href="index.html" aria-label="Mô Bedding — Trang chủ" data-en-aria="Mô Bedding — Home">
         <img src="assets/img/logo-mark.png" alt="Mô">
-        <span class="logo__tag">ga gối cho riêng bạn</span>
+        <span class="logo__tag" data-en="bedding just for you">ga gối cho riêng bạn</span>
       </a>
-      <nav class="nav" aria-label="Menu chính">${links}</nav>
+      <nav class="nav" aria-label="Menu chính" data-en-aria="Main menu">${links}</nav>
       <div class="actions">
         <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm" data-en-aria="Search">${ICON.search}</button>
-        <div class="lang lang--desktop" role="group" aria-label="Ngôn ngữ">
+        <div class="lang lang--desktop" role="group" aria-label="Ngôn ngữ" data-en-aria="Language">
           <button data-lang="vi">VI</button><button data-lang="en">EN</button>
         </div>
         <a class="icon-btn" href="#" id="cartBtn" aria-label="Giỏ hàng" data-en-aria="Cart">${ICON.bag}<span class="cart-count" id="cartCount">0</span></a>
@@ -120,7 +120,7 @@ function renderHeader() {
         <form action="shop.html" role="search">
           ${ICON.search.replace('<svg', '<svg width="22" height="22"')}
           <input name="q" type="search" placeholder="Hôm nay bạn muốn ôm gì vào giấc ngủ?" data-en-ph="What would you like to fall asleep with?" autocomplete="off">
-          <button type="button" class="icon-btn" id="searchClose" aria-label="Đóng">${ICON.close}</button>
+          <button type="button" class="icon-btn" id="searchClose" aria-label="Đóng" data-en-aria="Close">${ICON.close}</button>
         </form>
         <div class="search-tags">
           <span data-en="Often searched:">Hay được tìm:</span>
@@ -135,7 +135,7 @@ function renderHeader() {
   <div class="drawer" id="drawer">
     <div class="drawer__scrim" data-close></div>
     <div class="drawer__panel">
-      <button class="icon-btn drawer__close" data-close aria-label="Đóng">${ICON.close}</button>
+      <button class="icon-btn drawer__close" data-close aria-label="Đóng" data-en-aria="Close">${ICON.close}</button>
       <a href="index.html" data-en="Home">Trang chủ</a>
       ${NAV.map(([href, vi, en]) => `<a href="${href}" data-en="${en}">${vi}</a>`).join('')}
       <div class="lang" style="margin-top:24px;align-self:flex-start"><button data-lang="vi">Tiếng Việt</button><button data-lang="en">English</button></div>
@@ -154,7 +154,7 @@ function renderFooter() {
           <h3 data-en="A small letter each month, about sleep and slow mornings.">Mỗi tháng, một lá thư nhỏ về giấc ngủ và những buổi sáng chậm.</h3>
           <form class="newsletter" id="newsletter">
             <input type="email" required placeholder="Email của bạn" data-en-ph="Your email" aria-label="Email">
-            <button aria-label="Đăng ký">${ICON.arrow}</button>
+            <button aria-label="Đăng ký" data-en-aria="Subscribe">${ICON.arrow}</button>
           </form>
           <small data-en="Mô writes rarely, and gently. Leave whenever you like.">Mô viết ít, và viết nhẹ thôi. Bạn có thể rời đi bất cứ lúc nào.</small>
         </div>
@@ -227,6 +227,14 @@ function applyLang(lang) {
     if (el.dataset.viAria === undefined) el.dataset.viAria = el.getAttribute('aria-label');
     el.setAttribute('aria-label', lang === 'en' ? el.dataset.enAria : el.dataset.viAria);
   });
+  $$('[data-en-alt]').forEach(el => {
+    if (el.dataset.viAlt === undefined) el.dataset.viAlt = el.alt;
+    el.alt = lang === 'en' ? el.dataset.enAlt : el.dataset.viAlt;
+  });
+  if (document.body.dataset.enTitle) {
+    if (document.body.dataset.viTitle === undefined) document.body.dataset.viTitle = document.title;
+    document.title = lang === 'en' ? document.body.dataset.enTitle : document.body.dataset.viTitle;
+  }
   $$('[data-lang]').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
   document.dispatchEvent(new CustomEvent('langchange'));
 }

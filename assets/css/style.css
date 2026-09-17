@@ -1312,3 +1312,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .mission__imgs--one img,
   .mission__imgs--one img:first-child { object-position: 88% 55%; }
 }
+
+/* ==========================================================================
+   Sửa web — phần 15 (17/09): menu chính nén khoảng cách chữ cái 20%
+   (.15em → .12em · ≤1400px .1em → .08em · ≤1240px .07em → .056em)
+   ========================================================================== */
+.nav a { letter-spacing: .12em; }
+@media (max-width: 1400px) { .nav a { letter-spacing: .08em; } }
+@media (max-width: 1240px) { .nav a { letter-spacing: .056em; } }
