@@ -1361,3 +1361,38 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 /* Sửa web — phần 20 (17/09): nút "Xem tất cả câu chuyện" căn giữa theo thẻ Feeling sexy phía trên */
 .hub__all { justify-self: center; }
+
+/* ==========================================================================
+   Sửa web — phần 21 (17/09): áp dụng chính thức banner kiểu pigletinbed.com
+   Tiêu đề Instrument Serif căn giữa · câu phụ viết thường · 2 nút (nền nâu + viền trắng)
+   Khôi phục bản cũ: git tag `banner-truoc-demo` (xoá khối này + hero cũ trong index.html)
+   ========================================================================== */
+.hero--slides .hero__slide::after { background: linear-gradient(0deg, rgba(20,16,14,.62) 0%, rgba(20,16,14,.28) 42%, rgba(20,16,14,.08) 70%); }
+.hero--slides .hero__content { bottom: clamp(56px, 11vh, 120px); }
+.hero--slides .hero__text { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.hero--slides .hero__title {
+  font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; text-transform: none;
+  font-size: clamp(44px, 5.8vw, 96px); line-height: 1; letter-spacing: -.01em;
+  text-shadow: 0 2px 24px rgba(0,0,0,.25);
+}
+.hero--slides .hero__sub.script-sub {
+  font-family: var(--sans); font-weight: 400; text-transform: none; letter-spacing: 0;
+  font-size: clamp(15px, 1.35vw, 20px); line-height: 1.5; color: #fff;
+  max-width: 60ch; margin: clamp(14px, 1.6vw, 24px) 0 clamp(24px, 2.6vw, 38px);
+  text-shadow: 0 1px 12px rgba(0,0,0,.3);
+}
+.hero__btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.hero--slides .hero__btns .btn {
+  font-family: var(--sans); font-size: clamp(14px, 1.1vw, 16px); font-weight: 500;
+  letter-spacing: 0; text-transform: none; padding: 14px 34px; border-radius: 3px;
+}
+.hero__btns .btn--fill { background: var(--brand); border: 1px solid var(--brand); color: #fff; }
+.hero__btns .btn--fill:hover { background: #8a6754; border-color: #8a6754; }
+.hero__btns .btn--ghost { background: rgba(20,16,14,.18); border: 1px solid #fff; color: #fff; }
+.hero__btns .btn--ghost:hover { background: #fff; color: var(--ink); }
+.hero--slides .hero__dots { left: 50%; right: auto; transform: translateX(-50%); bottom: 22px; }
+@media (max-width: 760px) {
+  .hero--slides .hero__slide::after { background: linear-gradient(0deg, rgba(20,16,14,.72) 0%, rgba(20,16,14,.3) 50%, rgba(20,16,14,.08) 75%); }
+  .hero__btns { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; gap: 10px; }
+  .hero--slides .hero__content { bottom: 64px; }
+}
