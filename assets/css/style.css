@@ -1207,3 +1207,33 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 .film__overlay .film__caption { position: static; font-size: 9.5px; letter-spacing: .2em; margin: 0 0 20px; }
 .film__title { color: var(--white); margin: 0; text-shadow: 0 2px 18px rgba(0,0,0,.25); }
 @media (max-width: 760px) { .film__overlay .film__caption { margin-bottom: 12px; } }
+
+/* =========================================================
+   Sửa web — phần 12 (17/09)
+   ========================================================= */
+/* Góc nhìn của Mô: chỉ còn câu trích, đặt trong khung mờ tinh tế */
+.view { padding: clamp(44px, 5.4vw, 80px) var(--pad); }
+.view__frame {
+  display: inline-block; max-width: 100%;
+  padding: clamp(18px, 1.8vw, 26px) clamp(26px, 3.2vw, 52px);
+  background: rgba(250, 246, 241, .38);
+  border: 1px solid rgba(255, 255, 255, .55);
+  box-shadow: 0 10px 40px -24px rgba(58, 50, 48, .35), inset 0 0 0 1px rgba(158, 120, 99, .08);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.view__frame blockquote { margin: 0; }
+
+/* Về Mô: một ảnh phủ kín banner */
+.mission__imgs--one { grid-template-columns: 1fr; }
+.mission__imgs--one img { object-position: 50% 42%; }
+@media (max-width: 760px) { .mission__imgs--one img { display: block !important; object-position: 60% 45%; } }
+
+/* Đồng bộ 3 khối 3 cột (Bộ sưu tập · Sản phẩm · Trải nghiệm) theo khối Trải nghiệm:
+   cùng bề ngang ảnh, cùng khoảng cách giữa các ảnh, cùng lề hai bên */
+@media (min-width: 761px) {
+  .coll-row, .pcards, .offer__cards {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(18px, 2.6vw, 44px); margin-left: 0; margin-right: 0; justify-content: stretch;
+  }
+  .ccard figure { aspect-ratio: 400 / 543; }
+}
