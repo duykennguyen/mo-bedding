@@ -1248,3 +1248,21 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 /* Về Mô: ảnh nền mới, giữ người và chiếc giường trong khung, chữ nằm trên nền trời */
 .mission__imgs--one img { object-position: 50% 62%; }
 @media (max-width: 760px) { .mission__imgs--one img { object-position: 72% 55%; } }
+
+/* =========================================================
+   Sửa lỗi tràn ngang trên điện thoại (17/09)
+   ========================================================= */
+/* Ô tìm kiếm (ẩn) có bề rộng tối thiểu mặc định lớn hơn màn hình điện thoại -> đẩy trang rộng ra */
+.search-panel form { min-width: 0; }
+.search-panel input { min-width: 0; width: 100%; }
+.search-panel:not(.open) { visibility: hidden; }
+/* Chặn mọi phần tử vô tình tràn ngang, không làm hỏng header dính trên cùng */
+html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+
+/* Trang con: cột không bị chữ dài kéo rộng trên màn hình rất hẹp */
+.chapter > *, .story-split > *, .experience > *, .feature > *, .hub__grid > * { min-width: 0; }
+.chapter__txt h2, .page-hero h1, .sec-title { overflow-wrap: anywhere; }
+
+/* Nút có chữ dài được xuống dòng trên điện thoại rất hẹp */
+@media (max-width: 480px) { .btn { white-space: normal; text-align: center; max-width: 100%; } }
