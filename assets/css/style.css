@@ -1352,3 +1352,9 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .hub__head--center .head-row__main, .hub__head--center .head-row .btn { grid-column: 1; justify-self: center; }
   .hub__head--center .head-row .btn { order: 2; }
 }
+
+/* ==========================================================================
+   Sửa web — phần 19 (17/09): nút "Xem tất cả câu chuyện" chuyển xuống dưới
+   thẻ "Feeling sexy", sát lề phải cột phải
+   ========================================================================== */
+.hub__all { justify-self: end; margin-top: clamp(0px, 1vw, 12px); }
