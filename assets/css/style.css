@@ -1141,3 +1141,12 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
   .actions { gap: 2px; }
 }
 @media (max-width: 360px) { .logo__tag { font-size: 17px; } .logo img { height: 38px; } }
+
+/* =========================================================
+   Sửa web — phần 9 (17/09): tagline font Josefin Sans mảnh, màu đen, 4/5 bản demo
+   ========================================================= */
+.logo__tag { font-family: "Josefin Sans", "Open Sans", sans-serif; font-style: normal; font-weight: 200; font-size: 19px; line-height: 1; letter-spacing: .02em; color: #1a1716; margin: 8px 0 0 10px; }
+@media (max-width: 1240px) { .logo__tag { font-size: 18px; } }
+@media (max-width: 1100px) { .logo__tag { font-size: 18px; } }
+@media (max-width: 560px) { .logo__tag { font-size: 15px; margin: 6px 0 0 6px; } }
+@media (max-width: 360px) { .logo__tag { font-size: 13.5px; } }
