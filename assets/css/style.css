@@ -1173,3 +1173,14 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 @media (max-width: 1100px) { .logo__tag { font-size: 23px; } }
 @media (max-width: 560px) { .logo__tag { font-size: 19px; margin: 8px 0 0 5px; } }
 @media (max-width: 360px) { .logo__tag { font-size: 17px; } }
+
+/* =========================================================
+   Sửa web — phần 10 (17/09)
+   ========================================================= */
+/* Bộ sưu tập: giữ cỡ ảnh, khoảng cách giữa 3 khối còn 2/5, dồn vào giữa để lề hai bên rộng hơn */
+@media (min-width: 761px) {
+  .coll-row { justify-content: center; column-gap: calc(0.4 * (clamp(20px, 2.6vw, 40px) + 57px)); }
+}
+/* Dòng chữ nhỏ trên tiêu đề các khối: nhỏ thêm 3 cỡ */
+.sec-kicker, .feature__kicker { font-size: 10px; letter-spacing: .16em; }
+.mission__kicker { font-size: 10px; }
