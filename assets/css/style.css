@@ -1298,3 +1298,17 @@ html, body { max-width: 100%; overflow-x: hidden; }
     .chapter__img { height: 112vw; }
   }
 }
+
+/* ==========================================================================
+   Sửa web — phần 14 (17/09): ảnh nền "Về Mô" lấy nhân vật làm trọng tâm
+   Ảnh đặt tuyệt đối (không dựa vào chiều cao % trong grid — trình duyệt cũ
+   hiểu sai nên ảnh bị neo đỉnh, chỉ thấy bầu trời). Quy tắc :first-child cũ
+   mạnh hơn nên ghi đè cả hai bộ chọn.
+   ========================================================================== */
+.mission__imgs--one { display: block; }
+.mission__imgs--one img,
+.mission__imgs--one img:first-child { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; }
+@media (max-width: 760px) {
+  .mission__imgs--one img,
+  .mission__imgs--one img:first-child { object-position: 88% 55%; }
+}
