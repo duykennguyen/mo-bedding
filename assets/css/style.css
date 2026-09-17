@@ -1150,3 +1150,10 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 @media (max-width: 1100px) { .logo__tag { font-size: 18px; } }
 @media (max-width: 560px) { .logo__tag { font-size: 15px; margin: 6px 0 0 6px; } }
 @media (max-width: 360px) { .logo__tag { font-size: 13.5px; } }
+
+/* Tagline nhỏ thêm 2 cỡ */
+.logo__tag { font-size: 17px; }
+@media (max-width: 1240px) { .logo__tag { font-size: 16px; } }
+@media (max-width: 1100px) { .logo__tag { font-size: 16px; } }
+@media (max-width: 560px) { .logo__tag { font-size: 13px; } }
+@media (max-width: 360px) { .logo__tag { font-size: 12px; } }
