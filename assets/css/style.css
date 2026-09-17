@@ -1358,3 +1358,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
    thẻ "Feeling sexy", sát lề phải cột phải
    ========================================================================== */
 .hub__all { justify-self: end; margin-top: clamp(0px, 1vw, 12px); }
+
+/* Sửa web — phần 20 (17/09): nút "Xem tất cả câu chuyện" căn giữa theo thẻ Feeling sexy phía trên */
+.hub__all { justify-self: center; }
