@@ -1237,3 +1237,14 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
   }
   .ccard figure { aspect-ratio: 400 / 543; }
 }
+
+/* =========================================================
+   Sửa web — phần 13 (17/09)
+   ========================================================= */
+/* 3 khối 3 cột: ảnh cùng chiều cao, lấy tỉ lệ ảnh Bộ sưu tập (400:543) làm chuẩn */
+@media (min-width: 761px) {
+  .ccard figure, .pcat__img, .ocard { aspect-ratio: 400 / 543; }
+}
+/* Về Mô: ảnh nền mới, giữ người và chiếc giường trong khung, chữ nằm trên nền trời */
+.mission__imgs--one img { object-position: 50% 62%; }
+@media (max-width: 760px) { .mission__imgs--one img { object-position: 72% 55%; } }
