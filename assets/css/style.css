@@ -1328,3 +1328,12 @@ html, body { max-width: 100%; overflow-x: hidden; }
    ========================================================================== */
 .hero--slides .hero__title { text-transform: uppercase; letter-spacing: .01em; text-shadow: 0 2px 18px rgba(0,0,0,.25); }
 .hub__intro { max-width: 62ch; margin: clamp(8px, 1.4vw, 20px) auto 0; text-align: center; }
+
+/* ==========================================================================
+   Sửa web — phần 17 (17/09): cụm tiêu đề "Mô Bedding kể chuyện" căn giữa
+   (dòng nhỏ · tiêu đề · đoạn giới thiệu · nút "Xem tất cả câu chuyện" bên dưới)
+   ========================================================================== */
+.hub__head--center { text-align: center; max-width: 900px; margin-left: auto; margin-right: auto; }
+.hub__head--center .hub__title { margin-bottom: 0; }
+.hub__head--center .hub__intro { max-width: 62ch; margin: clamp(14px, 1.6vw, 24px) auto 0; }
+.hub__head--center .btn { margin-top: clamp(22px, 2.4vw, 34px); }
