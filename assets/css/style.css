@@ -1337,3 +1337,18 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .hub__head--center .hub__title { margin-bottom: 0; }
 .hub__head--center .hub__intro { max-width: 62ch; margin: clamp(14px, 1.6vw, 24px) auto 0; }
 .hub__head--center .btn { margin-top: clamp(22px, 2.4vw, 34px); }
+
+/* ==========================================================================
+   Sửa web — phần 18 (17/09): nút "Xem tất cả câu chuyện" về lại góc phải,
+   cùng hàng tiêu đề; dòng nhỏ + tiêu đề + đoạn giới thiệu vẫn căn giữa trang.
+   Lưới 1fr · auto · 1fr giữ tiêu đề đúng giữa mà không đè lên nút.
+   ========================================================================== */
+.hub__head--center { max-width: none; }
+.hub__head--center .head-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 24px; margin-bottom: 0; }
+.hub__head--center .head-row__main { grid-column: 2; }
+.hub__head--center .head-row .btn { grid-column: 3; justify-self: end; margin-top: 0; }
+@media (max-width: 640px) {
+  .hub__head--center .head-row { grid-template-columns: 1fr; justify-items: center; gap: 18px; }
+  .hub__head--center .head-row__main, .hub__head--center .head-row .btn { grid-column: 1; justify-self: center; }
+  .hub__head--center .head-row .btn { order: 2; }
+}
