@@ -1099,3 +1099,19 @@ h1 em, h2 em, h3 em, blockquote em, .hero__title em { font-style: normal; }
 .film__media { width: 100%; aspect-ratio: 16 / 9; max-height: 92vh; }
 .film .feature { margin-top: clamp(56px, 7vw, 110px); }
 @media (max-width: 760px) { .film__media { aspect-ratio: 3 / 4; max-height: none; } }
+
+/* =========================================================
+   Sửa web — phần 7 (17/09)
+   ========================================================= */
+/* "ga gối cho riêng bạn" bằng nét viết tay */
+.logo__tag { font-family: "Oooh Baby", "Open Sans", cursive; font-style: normal; font-weight: 400; font-size: 23px; letter-spacing: .01em; color: var(--ink-soft); margin: 14px 0 0 8px; }
+/* Menu viết hoa, giãn chữ như Namia */
+.nav { gap: 30px; }
+.nav a { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--ink); }
+@media (max-width: 1400px) { .nav { gap: 22px; } .nav a { font-size: 12px; letter-spacing: .12em; } }
+@media (max-width: 1280px) { .logo__tag { display: none; } }
+@media (max-width: 1100px) { .logo__tag { display: inline; font-size: 21px; } }
+@media (max-width: 440px) { .logo__tag { display: none; } }
+/* Góc nhìn của Mô: nhỏ hơn, một dòng */
+.view blockquote { font-size: clamp(12.5px, .98vw, 14px); letter-spacing: .01em; max-width: none; }
+@media (min-width: 1000px) { .view blockquote { white-space: nowrap; } }
