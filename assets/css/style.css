@@ -1403,3 +1403,50 @@ html, body { max-width: 100%; overflow-x: hidden; }
    ========================================================================== */
 .hero--slides .hero__title { font-family: 'Spectral', Georgia, serif; font-weight: 200; letter-spacing: 0; font-size: clamp(36px, 5.1vw, 81px); line-height: 1.05; }
 .hero--slides .hero__sub.script-sub { font-family: 'Josefin Sans', var(--sans); font-weight: 300; }
+
+/* ==========================================================================
+   Sửa web — phần 23 (18/09): tối ưu trang chủ cho điện thoại & máy tính bảng
+   (máy tính ≥1101px giữ nguyên)
+   ========================================================================== */
+/* Tiêu đề khối ngắt dòng cân đối, không để 1 chữ lẻ ở dòng cuối */
+@media (max-width: 1100px) { .sec-title, .offer__title, .feature__title, .hcard h3, .ocard h3 { text-wrap: balance; } }
+
+/* --- Máy tính bảng dọc (761–900px): giữ bố cục 2 cột như máy tính thay vì xếp chồng --- */
+@media (min-width: 761px) and (max-width: 900px) {
+  .feature { grid-template-columns: 1fr 1.15fr; gap: 36px; }
+  .feature__small { max-width: 620px; }
+  .feature__title { font-size: clamp(30px, 4.4vw, 40px); }
+  .hub__grid { grid-template-columns: 1.3fr 1fr; gap: 24px; }
+  .hub__col--right { padding-top: 24px; }
+  .hcard--split { grid-template-columns: 1fr; }
+  .hcard--split figure { min-height: 0; aspect-ratio: 4 / 3; }
+}
+
+/* --- Điện thoại (≤760px) --- */
+@media (max-width: 760px) {
+  /* Dải thông báo: 1 dòng gọn */
+  .announce { font-size: 9.5px; letter-spacing: .05em; padding: 8px 12px; line-height: 1.4; }
+
+  /* Sản phẩm + Trải nghiệm: vuốt ngang giống khối Bộ sưu tập, ảnh dọc cùng tỉ lệ 400:543 */
+  .pcards, .offer__cards {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%;
+    gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; padding-bottom: 4px;
+  }
+  .pcards::-webkit-scrollbar, .offer__cards::-webkit-scrollbar { display: none; }
+  .pcat, .ocard { scroll-snap-align: start; }
+  .pcat__img, .ocard, .ocard--text { aspect-ratio: 400 / 543; }
+  .pcat p { margin-bottom: 18px; }
+  .ocard--text p { font-size: 14px; }
+
+  /* Video: dòng chữ lớn nằm gọn 1 dòng */
+  .film__title { font-size: clamp(20px, 5.9vw, 30px); white-space: nowrap; }
+
+  /* Tiêu đề khối vừa phải hơn trên màn hẹp */
+  .offer__title { font-size: clamp(28px, 8vw, 36px); }
+  .feature__title { font-size: clamp(30px, 8.6vw, 40px); }
+}
+@supports not (aspect-ratio: 1 / 1) {
+  @media (max-width: 760px) { .pcat__img, .ocard, .ocard--text { height: 108vw; } }
+}
+@media (max-width: 400px) { .announce { font-size: 8.8px; letter-spacing: .02em; padding: 8px 8px; } }
